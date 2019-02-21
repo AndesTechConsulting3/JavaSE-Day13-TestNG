@@ -2,12 +2,19 @@ package org.andestech.learning.rfb19.g3;
 
 
 import org.testng.Assert;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 
 public class App2Test
 {
+
+    @AfterSuite
+    public static void afterSuite(){
+        System.out.println("After Suite!!");
+
+    }
 
     public App2Test(){
         System.out.println("+++ ctor, object: " + this);
@@ -24,7 +31,7 @@ public class App2Test
 
 }
 
-    @Test(priority = -1, groups = {"fast", "slow"})
+    @Test(priority = -1, groups = {"slow"})
     public void ng4test()
     {
         Assert.assertTrue(1==1, "Ok!!");

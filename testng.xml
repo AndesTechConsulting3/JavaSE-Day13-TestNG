@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="MySuite">
+    <parameter name="a" value="1"/>
+    <parameter name="b" value="2"/>
+    <parameter name="c" value="3"/>
+    
+<test name="test1">
+    <classes>
+        <class name="org.andestech.learning.rfb19.g3.App2Test">
+            <methods>
+                <exclude name="ng3test"/>
+            </methods>
+            
+        </class>
+
+    </classes>
+    
+</test>
+
+
+<test name="Parameter Test">
+    <classes>
+        <class name="org.andestech.learning.rfb19.g3.App3Test">
+            <parameter name="name" value="Basil"></parameter>
+        </class>
+    </classes>
+
+
+</test>
+    
+    
+<test name="test2">
+
+    <groups>
+        <run>
+            <include name="fast">
+                <classes>
+                    <class name="org.andestech.learning.rfb19.g3.App2Test"></class>
+                </classes>
+            </include>
+
+        </run>
+    </groups>
+
+</test>    
+    
+</suite>
