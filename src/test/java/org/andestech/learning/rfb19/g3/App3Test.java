@@ -61,6 +61,7 @@ public class App3Test
     public void summaTest(int x, int y, int summa)
     {
         System.out.printf("a:%s, b:%s, c:%s", x,y,summa);
+        assertEquals(x+y, summa);
     }
 
 
